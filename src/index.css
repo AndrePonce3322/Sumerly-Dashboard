@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Inter var';
+  src: url(assets/Inter/inter.ttf) format('truetype');
+}
+
+body,
+html {
+  background-color: #12151c;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+*::-webkit-scrollbar{
+  width: 5px;
+  background: white;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb{
+  background: #02e38b;
+  border-radius: 10px;
+}
+/* Estilo base para los elementos a animar */
+.elemento {
+  opacity: 0;
+  transform: translateY(20px); /* Desplazar hacia abajo para una apariencia suave */
+  transition: opacity 0.5s ease, transform 0.5s ease, 0.2s filter;
+}
+
+/* Clase para activar la animación */
+.elemento-activo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+}
